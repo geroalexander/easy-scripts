@@ -63,3 +63,13 @@ else
     # If TypeScript is already installed, print a message
     echo "TypeScript is already installed."
 fi
+
+# Check if Neovim is installed
+if ! command -v nvim &> /dev/null; then
+    # If Neovim is not installed, install it
+    echo "Neovim is not installed, installing..."
+    brew install neovim
+    echo "Neovim has been installed."
+else
+    echo "Neovim is already installed"
+fi
